@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"  
+}
+
+model Pet {
+  id        String   @id @default(uuid())
+  nome      String
+  especie   String
+  idade     Int
+  dono      String
+  createdAt DateTime @default(now())
+}
